@@ -33,7 +33,7 @@ public abstract class AbstractPipe implements Pipe {
         return currentAction;
     }
 
-    public void StartHub(Action action){
+    public void startWithAction(Action action){
         broadcastEvent(new PipeEvent(PipeEvent.STARTED));
         broadcastProgress(0);
         setNextAction(action);
